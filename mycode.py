@@ -14,6 +14,14 @@ data = {
 }
 df = pd.DataFrame(data)
 
+new_rows = [
+    {'Name': 'Frank', 'Age': 26, 'City': 'Seattle'},
+    {'Name': 'Grace', 'Age': 31, 'City': 'Boston'}
+]
+
+for row in new_rows:
+    df.loc[len(df)] = row
+
 # Step 3: Save the DataFrame as a CSV file in the 'data' folder
 csv_path = os.path.join(folder_name, 'people.csv')
 df.to_csv(csv_path, index=False)
