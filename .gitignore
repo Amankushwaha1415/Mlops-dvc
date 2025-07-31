@@ -1,2 +1,8 @@
 mlopsvenv/
 /data
+logs/
+
+# i want to track these files using dvc so i will ignore them in git
+models/
+reports/
+data/
